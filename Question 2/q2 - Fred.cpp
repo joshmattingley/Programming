@@ -101,19 +101,22 @@ int main () {
     }
 
     // caluating the combinations
-    // 0=cycling shoes / goggles, 1=cycling shoes / sunglasses,
-    // 2=running shoes / goggles, 3=running shoes / sunglasses,
-    // 4=flippers / goggles, 5=flippers / sunglasses
     float combinations[6];
+    //Cycling Shoes and Goggles
     combinations[0] = ((technical_clothing_time[0] + technical_clothing_time[3]) / 2);
+    //Cycling Shoes and Sunglasses
     combinations[1] = ((technical_clothing_time[0] + technical_clothing_time[4]) / 2);
+    //Running Shoes and Goggles
     combinations[2] = ((technical_clothing_time[1] + technical_clothing_time[3]) / 2);
+    //Running Shoes and Sunglasses
     combinations[3] = ((technical_clothing_time[1] + technical_clothing_time[4]) / 2);
+    //Flippers and Goggles
     combinations[4] = ((technical_clothing_time[2] + technical_clothing_time[3]) / 2);
+    //Flippers and Sunglasses
     combinations[5] = ((technical_clothing_time[2] + technical_clothing_time[4]) / 2);
 
 
-    for (int i = 0; i < 1; i++) {
+  // for (int i = 0; i < 1; i++) {
         std::cout << "\n==============================\n" << std::endl;
         std::cout << "combination of technical clothing" << "\t" << "|" << "\t" << "time (hours)" << std::endl;
         std::cout << "Cycling shoes / Goggles          " << "\t" << "|" << "\t" << combinations[0] << std::endl;
@@ -122,7 +125,7 @@ int main () {
         std::cout << "Running shoes / Sunglasses       " << "\t" << "|" << "\t" << combinations[3] << std::endl;
         std::cout << "Flippers / Goggles               " << "\t" << "|" << "\t" << combinations[4] << std::endl;
         std::cout << "Flippers / Sunglasses            " << "\t" << "|" << "\t" << combinations[5] << std::endl;
-    }
+  //  }
 
 
 
