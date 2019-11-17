@@ -11,6 +11,7 @@
     std::cout << "\n===============================================\n" << std::endl;
   }
 
+  //function to calculate time
   float time(float d, float s) {
       float result;
       //declaring the operations inside the function
@@ -18,6 +19,7 @@
       return(result);
   }
 
+  //function to convert kilometers to meters
   float Kilo(float n) {
     float result;
     //declaring the operations inside the function
@@ -174,8 +176,11 @@ int main () {
         char options[6][50] = {"Cycling shoes & Sunglasses", "Running shoes & Sunglasses", "Cycling shoes & Goggles\t", "Running shoes & Goggles\t", "Flippers & Sunglasses\t", "Flippers & Goggles\t"};
 
 
+
+
         //This loop outputs all of the calculations of time with each combination
         for(int i = 0; i < 6; i++) {
           std::cout << options[i] << "\t|\t"  << combinations[i] << std::endl;
         }
+    
 }

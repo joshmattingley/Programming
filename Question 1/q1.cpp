@@ -11,6 +11,7 @@
     std::cout << "\n===============================================\n" << std::endl;
   }
 
+  //function to calculate time
   float time(float d, float s) {
       float result;
       //declaring the operations inside the function
@@ -18,6 +19,7 @@
       return(result);
   }
 
+  //function to convert kilometers to meters
   float Kilo(float n) {
     float result;
     //declaring the operations inside the function
