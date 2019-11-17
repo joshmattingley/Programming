@@ -71,6 +71,8 @@ int main () {
 
     //===================================== Q2 ========================================
 
+    //============================= Swimming ====================================
+
     //Creating a variable for original Swim time
     float New_Swim_Time = time(Dist[0], Speed[0]);
 
@@ -84,6 +86,8 @@ int main () {
     for(int i = 0; i < 6; i++) {
       technical_clothing_swim[i] = Technical_Swim_Modifiers[i] * New_Swim_Time;
     }
+
+    //============================= Cycling ====================================
 
     //Creating an array to hold the information of the new times for cycling
     float New_Cycling_Time = time(Dist[1], Speed[1]);
@@ -99,8 +103,9 @@ int main () {
     technical_clothing_cycling[i] = Technical_Cycling_Modifiers[i] * New_Cycling_Time;
   }
 
+  //============================= Running ====================================
 
-  //Creating an array to hold the information of the new times for cycling
+  //Creating an array to hold the information of the new times for running
     float New_Run_Time = time(Dist[2], Speed[2]);
 
       //In order: Cycling Shoes, Running Shoes, Flippers, Goggles and Sunglasses
@@ -114,9 +119,10 @@ int main () {
     technical_clothing_run[i] = Technical_Run_Modifiers[i] * New_Run_Time;
   }
 
+
     // Caluating the full time of the technical clothing
     float technical_clothing_time[5];
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 6; i++) {
         technical_clothing_time[i] = (technical_clothing_swim[i] + technical_clothing_cycling[i] + technical_clothing_run[i]);
     }
 
@@ -136,7 +142,6 @@ int main () {
     combinations[5] = ((technical_clothing_time[2] + technical_clothing_time[4]) / 2);
 
 
-  // for (int i = 0; i < 1; i++) {
         std::cout << "\n==============================================\n" << std::endl;
         std::cout << "combination of technical clothing" << "\t" << "|" << "\t" << "time (hours)" << std::endl;
         std::cout << "Cycling shoes / Goggles          " << "\t" << "|" << "\t" << combinations[0] << std::endl;
@@ -145,8 +150,6 @@ int main () {
         std::cout << "Running shoes / Sunglasses       " << "\t" << "|" << "\t" << combinations[3] << std::endl;
         std::cout << "Flippers / Goggles               " << "\t" << "|" << "\t" << combinations[4] << std::endl;
         std::cout << "Flippers / Sunglasses            " << "\t" << "|" << "\t" << combinations[5] << std::endl;
-  //  }
-
 
 
 }
