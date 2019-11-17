@@ -2,8 +2,12 @@
 #include <iomanip>
 #include <cmath>
 
-  void line() {
+  void line_small() {
     std::cout << "==============================\n";
+  }
+
+  void line_big() {
+    std::cout << "\n===============================================\n" << std::endl;
   }
 
   float time(float d, float s) {
@@ -55,7 +59,7 @@ int main () {
       else {
         //Setting up heading of the title
         std::cout << "\n" << "Discipline\t" << "Time Taken (s)\n";
-        line();
+        line_small();
 
         //This loop outputs our discipline and the accompanying time taken, it also sets the decimal places
         for (int i = 0; i < 3; i++) {
@@ -103,7 +107,7 @@ int main () {
     technical_clothing_cycling[i] = Technical_Cycling_Modifiers[i] * New_Cycling_Time;
   }
 
-  //============================= Running ====================================
+  //=============================== Running ====================================
 
   //Creating an array to hold the information of the new times for running
     float New_Run_Time = time(Dist[2], Speed[2]);
@@ -119,14 +123,15 @@ int main () {
     technical_clothing_run[i] = Technical_Run_Modifiers[i] * New_Run_Time;
   }
 
+    //================================ end =====================================
 
-    // Caluating the full time of the technical clothing
+    // Caluating the full time for each item of technical clothing
     float technical_clothing_time[5];
     for (int i = 0; i < 6; i++) {
         technical_clothing_time[i] = (technical_clothing_swim[i] + technical_clothing_cycling[i] + technical_clothing_run[i]);
     }
 
-    // caluating the combinations
+    // caluating the combinations (times) of each item of technical clothing
     float combinations[6];
     //Cycling Shoes and Goggles
     combinations[0] = ((technical_clothing_time[0] + technical_clothing_time[3]) / 2);
@@ -142,23 +147,18 @@ int main () {
     combinations[5] = ((technical_clothing_time[2] + technical_clothing_time[4]) / 2);
 
 
-
-        std::cout << "\n==============================================\n" << std::endl;
+        line_big();
 
         //This tells the user the total time
         std::cout << "\n" << std::setprecision(3);
 
-        std::cout << "Options" << "\t\t\t\t\t" << "|" << "\t" << "Time taken (hours)" << std::endl;
-        std::cout << "============================================================" << std::endl;
+        std::cout << "Options" << "\t\t\t\t" << "|" << "\t" << "Time taken (hours)" << std::endl;
+        std::cout << "================================|==========================" << std::endl;
 
-        std::cout << "Cycling shoes / Goggles          " << "\t" << "|" << "\t" << combinations[0] << std::endl;
-        std::cout << "Cycling shoes / Sunglasses       " << "\t" << "|" << "\t" << combinations[1] << std::endl;
-        std::cout << "Running shoes / Goggles          " << "\t" << "|" << "\t" << combinations[2] << std::endl;
-        std::cout << "Running shoes / Sunglasses       " << "\t" << "|" << "\t" << combinations[3] << std::endl;
-        std::cout << "Flippers / Goggles               " << "\t" << "|" << "\t" << combinations[4] << std::endl;
-        std::cout << "Flippers / Sunglasses            " << "\t" << "|" << "\t" << combinations[5] << std::endl;
+        char options[6][50] = {"Cycling shoes & Goggles\t", "Cycling shoes & Sunglasses", "Running shoes & Goggles\t", "Running shoes & Sunglasses", "Flippers & Goggles\t", "Flippers & Sunglasses\t"};
 
-
-
+        for(int i = 0; i < 6; i++) {
+          std::cout << options[i] << "\t|\t"  << combinations[i] << std::endl;
+        }
 
 }
