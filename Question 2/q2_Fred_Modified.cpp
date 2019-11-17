@@ -123,7 +123,7 @@ int main () {
     technical_clothing_run[i] = Technical_Run_Modifiers[i] * New_Run_Time;
   }
 
-    //================================ end =====================================
+    //========================== Calculation & Output ==========================
 
     // Caluating the full time for each item of technical clothing
     float technical_clothing_time[5];
@@ -131,7 +131,7 @@ int main () {
         technical_clothing_time[i] = (technical_clothing_swim[i] + technical_clothing_cycling[i] + technical_clothing_run[i]);
     }
 
-    // caluating the combinations (times) of each item of technical clothing
+    // caluating the combinations (times) of each item of technical clothing (didne use an array, this way is clearer)
     float combinations[6];
     //Cycling Shoes and Goggles
     combinations[0] = ((technical_clothing_time[0] + technical_clothing_time[3]) / 2);
@@ -146,10 +146,9 @@ int main () {
     //Flippers and Sunglasses
     combinations[5] = ((technical_clothing_time[2] + technical_clothing_time[4]) / 2);
 
-
         line_big();
-
-        //This tells the user the total time
+        
+        //sets 3 d.p.
         std::cout << "\n" << std::setprecision(3);
 
         std::cout << "Options" << "\t\t\t\t" << "|" << "\t" << "Time taken (hours)" << std::endl;
