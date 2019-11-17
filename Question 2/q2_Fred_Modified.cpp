@@ -42,7 +42,7 @@ int main () {
 
     //This is the friendly message, output to the user recalling their values.
     for (int i = 0; i < 3; i++) {
-      std::cout << "For " << Disc[i] << " distance, you entered: " << Dist[i] << " kilometers.\n";
+      std::cout << "For " << Disc[i] << " distance, you entered: " << Dist[i] * 1000 << " meters.\n";
     }
 
     //This sums up the times to complete each section.
@@ -67,7 +67,7 @@ int main () {
     //This tells the user the total time
     std::cout << "\n" << std::setprecision(2);
     //This outputs the total time
-    std::cout << "Therefore, the total time would be " << total << " Hours";
+    std::cout << "Therefore, the total time would be " << total << " hours.";
 
     //===================================== Q2 ========================================
 
@@ -142,14 +142,23 @@ int main () {
     combinations[5] = ((technical_clothing_time[2] + technical_clothing_time[4]) / 2);
 
 
+
         std::cout << "\n==============================================\n" << std::endl;
-        std::cout << "combination of technical clothing" << "\t" << "|" << "\t" << "time (hours)" << std::endl;
+
+        //This tells the user the total time
+        std::cout << "\n" << std::setprecision(3);
+
+        std::cout << "Options" << "\t\t\t\t\t" << "|" << "\t" << "Time taken (hours)" << std::endl;
+        std::cout << "============================================================" << std::endl;
+
         std::cout << "Cycling shoes / Goggles          " << "\t" << "|" << "\t" << combinations[0] << std::endl;
         std::cout << "Cycling shoes / Sunglasses       " << "\t" << "|" << "\t" << combinations[1] << std::endl;
         std::cout << "Running shoes / Goggles          " << "\t" << "|" << "\t" << combinations[2] << std::endl;
         std::cout << "Running shoes / Sunglasses       " << "\t" << "|" << "\t" << combinations[3] << std::endl;
         std::cout << "Flippers / Goggles               " << "\t" << "|" << "\t" << combinations[4] << std::endl;
         std::cout << "Flippers / Sunglasses            " << "\t" << "|" << "\t" << combinations[5] << std::endl;
+
+
 
 
 }
