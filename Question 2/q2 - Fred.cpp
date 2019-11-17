@@ -69,6 +69,8 @@ int main () {
     //This outputs the total time
     std::cout << "Therefore, the total time would be " << total << " Hours";
 
+    //===================================== Q2 ========================================
+
     // technical clothing swimming
     // 0 = cycling shoes, 1 = running shoes, 2 = flippers, 3 = goggles, 4 = sunglasses
     float technical_clothing_swim[5];
