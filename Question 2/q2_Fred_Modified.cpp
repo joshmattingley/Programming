@@ -8,7 +8,7 @@
   }
 
   void line_big() {
-    std::cout << "\n===============================================\n" << std::endl;
+    std::cout << "\n===========================================================\n" << std::endl;
   }
 
   //function to calculate time
@@ -75,22 +75,22 @@ int main () {
     if (Dist[0] < 0 || Dist[1] < 0 || Dist [2] < 0){
       std::cout << "Please enter positive distances!";
     }
-      else {
+      //else {
         //Setting up heading of the title
-        std::cout << "\n" << "Discipline\t" << "Time Taken (s)\n";
-        line_small();
+        //std::cout << "\n" << "Discipline\t" << "Time Taken (s)\n";
+      //  line_small();
 
         //This loop outputs our discipline and the accompanying time taken, it also sets the decimal places
-        for (int i = 0; i < 3; i++) {
-            std::cout << std::setprecision(3);
-            std::cout << Disc[i] << " \t" << seconds(time(Dist[i], Speed[i])) <<"\n";
-              }
-        }
+    //    for (int i = 0; i < 3; i++) {
+      //      std::cout << std::setprecision(3);
+        //    std::cout << Disc[i] << " \t" << seconds(time(Dist[i], Speed[i])) <<"\n";
+          //    }
+        //}
 
     //This tells the user the total time
     std::cout << "\n" << std::setprecision(2);
     //This outputs the total time
-    std::cout << "Therefore, the total time would be " << total << " hours.";
+  //  std::cout << "Therefore, the total time would be " << total << " hours.";
 
     //===================================== Q2 ========================================
 
