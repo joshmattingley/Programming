@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <cmath>
 #include <bits/stdc++.h>
+#include <fstream>
 
   void line_small() {
     std::cout << "==============================\n";
@@ -173,14 +174,22 @@ int main () {
         std::cout << "Options" << "\t\t\t\t" << "|" << "\t" << "Time taken (hours)" << std::endl;
         std::cout << "================================|==========================" << std::endl;
 
+
         char options[6][50] = {"Cycling shoes & Sunglasses", "Running shoes & Sunglasses", "Cycling shoes & Goggles\t", "Running shoes & Goggles\t", "Flippers & Sunglasses\t", "Flippers & Goggles\t"};
-
-
 
 
         //This loop outputs all of the calculations of time with each combination
         for(int i = 0; i < 6; i++) {
           std::cout << options[i] << "\t|\t"  << combinations[i] << std::endl;
         }
+
+        std::cout << "Options\t" << "Swimming time\t" << "cycling time\t" << "Running time\n";
+        std::cout << "\n"<< options[0];
+
+        std::cout << "\n";
+
+          //for (int i = 0; i < 6; i++) {
+          //  std::cout << options[i] << swim << cycling << running << std::endl;
+        //  }
 
 }
