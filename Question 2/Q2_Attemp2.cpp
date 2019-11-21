@@ -2,6 +2,8 @@
 #include <iomanip>
 #include <cmath>
 #include <bits/stdc++.h>
+#include <fstream>
+
 
   void line_small() {
     std::cout << "==============================\n";
@@ -149,5 +151,18 @@ int main () {
       for(int i = 0; i < 6; i++) {
           std::cout << options[i] << "\t\t" << Cycling_Technical_Time[i] + Swimming_Technical_Time[i] + Running_Technical_Time[i] << std::endl;
       }
+
+      std::ofstream myFile;
+      myFile.open("Results.txt");
+
+      myFile << "Combination" << "\t\t                  " << "|" << "\t" << "Time taken (hours)" << std::endl;
+      myFile << "================================|==========================" << std::endl;
+
+      for(int i = 0; i < 6; i++) {
+          myFile << options[i] << "\t\t" << Cycling_Technical_Time[i] + Swimming_Technical_Time[i] + Running_Technical_Time[i] << std::endl;
+      }
+
+      myFile.close();
+
 
   }
