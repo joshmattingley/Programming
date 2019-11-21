@@ -104,7 +104,7 @@ int main () {
     float Technical_Swim_Modifiers[5] = {0.9, 0.98, 1.6, 1.35, 0.9};
 
     //Creating an array to hold the information of the new times for the swimming
-    float technical_clothing_swim[5];
+    float technical_clothing_swim[6];
 
     //Defining the new times taken to swim with the technical clothing (filling the array)
     for(int i = 0; i < 6; i++) {
@@ -120,7 +120,7 @@ int main () {
     float Technical_Cycling_Modifiers[5] = {1.12, 1.04, 0.95, 0.92, 1.08};
 
     //Creating an array to hold the information of the new times for the cycling
-    float technical_clothing_cycling[5];
+    float technical_clothing_cycling[6];
 
     //Defining the new times taken to swim with the technical clothing (filling the array)
     for(int i = 0; i < 6; i++) {
@@ -136,17 +136,18 @@ int main () {
     float Technical_Run_Modifiers[5] = {0.75, 1.25, 0.70, 0.88, 1.05};
 
     //Creating an array to hold the information of the new times for the running
-    float technical_clothing_run[5];
+    float technical_clothing_run[6];
 
     //Defining the new times taken to swim with the technical clothing (filling the array)
     for(int i = 0; i < 6; i++) {
     technical_clothing_run[i] = Technical_Run_Modifiers[i] * New_Run_Time;
   }
 
+
     //========================== Calculation & Output ==========================
 
     // Caluating the full time for each item of technical clothing
-    float technical_clothing_time[5];
+    float technical_clothing_time[6];
     for (int i = 0; i < 6; i++) {
         technical_clothing_time[i] = (technical_clothing_swim[i] + technical_clothing_cycling[i] + technical_clothing_run[i]);
     }
@@ -183,13 +184,25 @@ int main () {
           std::cout << options[i] << "\t|\t"  << combinations[i] << std::endl;
         }
 
-        std::cout << "Options\t" << "Swimming time\t" << "cycling time\t" << "Running time\n";
-        std::cout << "\n"<< options[0];
+      //  std::cout << "Options\t" << "Swimming time\t" << "cycling time\t" << "Running time\n";
+    //    std::cout << "\n"<< options[0];
 
         std::cout << "\n";
 
-          //for (int i = 0; i < 6; i++) {
-          //  std::cout << options[i] << swim << cycling << running << std::endl;
-        //  }
+    //      for (int i = 0; i < 6; i++) {
+      //    std::cout << options[i] << "\n";
+        //  line_small();
+//        std::cout << "Swimming\t" << technical_clothing_swim[i] << std::endl;
+  ///        std::cout << " Cycling\t" << technical_clothing_cycling[i] << std::endl;
+        std::cout << " Running\t" << time(Dist[2], Speed[2]) * ((Technical_Run_Modifiers[i] * Technical_Run_Modifiers[i+1]) << std::endl;
+    //   std::cout << "Cyling\t\t" << time(Dist[1], Speed[1]) * (Technical_Cycling_Modifiers[i] * Technical_Cycling_Modifiers[i+1]) << std::endl;
+    //      std::cout << " Running\t" << time(Dist[0], Speed[0]) * ((Technical_Swim_Modifiers[i] * * Technical_Swim_Modifiers[i+1]) << std::endl;
+    //    std::cout << "Total time: \t" << combinations[i] << std::endl;
+
+      //      std::cout << "\n";
+//}
+
+std::cout << "\n";
+          std::cout << technical_clothing_swim[5];
 
 }
