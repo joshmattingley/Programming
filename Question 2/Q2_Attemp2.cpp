@@ -99,20 +99,49 @@ int main () {
 //We are working out the Speed change for each piece of clothing for each
 
     //How the Cycling Shoes and Sunglasses effect The speed:
-      float Cycling_Technical_Time_Modifiers[6] = {0.9 * 0.9, 0.98 * 0.9, 0.9 * 1.35, 0.98 * 1.35, 1.6 * 0.9, 1.6 * 1.35};
+      float Cycling_Technical_Time_Modifiers[6] = {1.2096, 1.1232, 1.0304, 0.9568, 1.026, 0.874};
 
       float Cycling_Technical_Time[6];
 
       for (int i = 0; i < 6; i++) {
-        Cycling_Technical_Time[i] = time(Dist[1], Speed[1]) * Technical_Cycling_Modifiers[i];
+        Cycling_Technical_Time[i] = time(Dist[1], Speed[1]) * Cycling_Technical_Time_Modifiers[i];
       }
+
+//=========================================== Running =====================================
+
+    float Running_Technical_Time_Modifiers[6] = {0.7875, 1.3125, 0.66, 1.1, 0.735, 0.616};
+
+    float Running_Technical_Time[6];
+
+    for(int i = 0; i < 6; i++) {
+      Running_Technical_Time[i] = time(Dist[2], Speed[2]) * Running_Technical_Time_Modifiers[i];
+    }
+
+//=========================================== Swimming =====================================
+
+
+  float Swimming_Technical_Time_Modifiers[6] = {0.81, 0.882, 1.215, 1.323, 1.44, 2.16};
+
+  float Swimming_Technical_Time[6];
+
+  for(int i = 0; i < 6; i++) {
+    Swimming_Technical_Time[i] = time(Dist[0], Speed[0]) * Swimming_Technical_Time_Modifiers[i];
+  }
+
+
 
 
       for (int i = 0; i < 6; i++) {
-        std::cout << "Swimming time\t" << Cycling_Technical_Time << std::endl;
-        std::cout << "\n";
+        std::cout << "Discipline\t" << "Time taken\n";
 
+        line_small();
+
+        std::cout << "Cycling time\t" << Cycling_Technical_Time[i] << std::endl;
+        std::cout << "Swimming time\t" << Swimming_Technical_Time[i] << std::endl;
+        std::cout << "Running time\t" << Running_Technical_Time[i] << std::endl << std::endl;
       }
+
+
 
 
 
