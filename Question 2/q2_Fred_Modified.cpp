@@ -194,7 +194,7 @@ int main () {
         //  line_small();
 //        std::cout << "Swimming\t" << technical_clothing_swim[i] << std::endl;
   ///        std::cout << " Cycling\t" << technical_clothing_cycling[i] << std::endl;
-        std::cout << " Running\t" << time(Dist[2], Speed[2]) * ((Technical_Run_Modifiers[i] * Technical_Run_Modifiers[i+1]) << std::endl;
+  //      std::cout << " Running\t" << time(Dist[2], Speed[2]) * ((Technical_Run_Modifiers[i] * Technical_Run_Modifiers[i+1]) << std::endl;
     //   std::cout << "Cyling\t\t" << time(Dist[1], Speed[1]) * (Technical_Cycling_Modifiers[i] * Technical_Cycling_Modifiers[i+1]) << std::endl;
     //      std::cout << " Running\t" << time(Dist[0], Speed[0]) * ((Technical_Swim_Modifiers[i] * * Technical_Swim_Modifiers[i+1]) << std::endl;
     //    std::cout << "Total time: \t" << combinations[i] << std::endl;
