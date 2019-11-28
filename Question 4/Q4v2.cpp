@@ -17,16 +17,16 @@ int main() {
 
     int Min, Max;
 
-    std::cout << "Enter a Minimum Distance: ";
-    std::cin >> Min;
+  //  std::cout << "Enter a Minimum Distance: ";
+    //std::cin >> Min;
 
-    std::cout << "Enter a Maximum Distance: ";
+    std::cout << "Enter a Maximum Distance (above 1000): ";
     std::cin >> Max;
 
     float Random_Distances[1000] = {};
 
     for (int i = 0; i < 1000; i++) {
-      Random_Distances[i] = rand() % Max + Min;
+      Random_Distances[i] = rand() % Max + 1000;
     }
 
     float swimming_g_f, swimming_cs_sg;
