@@ -152,6 +152,9 @@ int main () {
           std::cout << options[i] << "\t\t" << Cycling_Technical_Time[i] + Swimming_Technical_Time[i] + Running_Technical_Time[i] << std::endl;
       }
 
+
+      //============================ outputting file ==============================
+
       std::ofstream myFile;
       myFile.open("Results.txt");
 
