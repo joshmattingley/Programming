@@ -15,7 +15,7 @@
   float time(float d, float s) {
       float result;
       //declaring the operations inside the function
-      result = d / s;
+      result = (d / 1000) / s;
       return(result);
   }
 
@@ -23,7 +23,7 @@
   float Kilo(float n) {
     float result;
     //declaring the operations inside the function
-    result = n * 10000;
+    result = n * 1000;
     return(result);
   }
 
@@ -55,7 +55,7 @@ int main () {
 
     //Loop that collects the data for each discipline, storing in variables
     for(int i = 0; i < 3; i++) {
-      std::cout << "Please insert a distance for " << Disc[i] << " in kilometers: ";
+      std::cout << "Please insert a distance for " << Disc[i] << " in meters: ";
       std::cin >> Dist[i];
     }
 
@@ -64,7 +64,7 @@ int main () {
 
     //This is the friendly message, output to the user recalling their values.
     for (int i = 0; i < 3; i++) {
-      std::cout << "For " << Disc[i] << " distance, you entered: " << Kilo(Dist[i]) << " meters.\n";
+      std::cout << "For " << Disc[i] << " distance, you entered: " << Dist[i] << " meters.\n";
     }
 
     //This sums up the times to complete each section.
