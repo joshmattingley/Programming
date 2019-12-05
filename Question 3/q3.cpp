@@ -45,6 +45,13 @@ int main () {
 
   }
 
+
+if(Dist[0] < 0 || Dist[1] < 0 || Dist[2] < 0) {
+  std::cout << "error";
+}
+
+else{
+
 //Table showing distances for each disipline and total distance for each race.
 std::cout << "\nRace\t|Swimming disatance\t|Cycling distance\t|Running Distance\t|Total Distance\n";
     line();
@@ -254,3 +261,4 @@ if (combinations[i+5] < combinations[i] && combinations[i+5] < combinations[i+1]
 }
 n = n + 1;
 }}
+}
