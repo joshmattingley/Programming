@@ -1,8 +1,8 @@
 Combination		                  |	Time taken (hours)
 ================================|==========================
-Cycling shoes & Sunglasses		0.0196587
-Running shoes & Sunglasses		0.0235252
-Cycling shoes & Goggles			0.0251548
-Running shoes & Goggles			0.0291618
-Flippers & Sunglasses			0.0291854
-Flippers & Goggles			0.0398601
+Cycling shoes & Sunglasses			1.54266
+Running shoes & Sunglasses			1.78151
+Cycling shoes & Goggles				1.43521
+Running shoes & Goggles				1.64602
+Flippers & Sunglasses				1.5273
+Flippers & Goggles				1.52131

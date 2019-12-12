@@ -130,8 +130,9 @@ int main () {
     Swimming_Technical_Time[i] = time(Dist[0], Speed[0]) * Swimming_Technical_Time_Modifiers[i];
   }
 
+  //loop to output the tables
       for (int i = 0; i < 6; i++) {
-        std::cout << "Disciplinet" << "Time taken\n";
+        std::cout << "Discipline\t" << "Time taken\n";
 
         line_small();
 
@@ -140,6 +141,7 @@ int main () {
         std::cout << "Running time\t" << Running_Technical_Time[i] << std::endl << std::endl;
       }
 
+      //Array to hold the combination/options
       char options[6][50] = {"Cycling shoes & Sunglasses", "Running shoes & Sunglasses", "Cycling shoes & Goggles\t", "Running shoes & Goggles\t", "Flippers & Sunglasses\t", "Flippers & Goggles\t"};
 
       //sets 3 d.p.
@@ -149,6 +151,7 @@ int main () {
       std::cout << "Combination" << "\t\t\t" << "|" << "\t" << "Time taken (hours)" << std::endl;
       std::cout << "================================|==========================" << std::endl;
 
+      //Outputting to the console the overall times
       for(int i = 0; i < 6; i++) {
           std::cout << options[i] << "\t\t" << Cycling_Technical_Time[i] + Swimming_Technical_Time[i] + Running_Technical_Time[i] << std::endl;
       }
@@ -163,7 +166,7 @@ int main () {
       myFile << "================================|==========================" << std::endl;
 
       for(int i = 0; i < 6; i++) {
-          myFile << options[i] << "\t\t" << Cycling_Technical_Time[i] + Swimming_Technical_Time[i] + Running_Technical_Time[i] << std::endl;
+          myFile << options[i] << "\t\t" <<  "\t" << Cycling_Technical_Time[i] + Swimming_Technical_Time[i] + Running_Technical_Time[i] << std::endl;
       }
 
       myFile.close();
